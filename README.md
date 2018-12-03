@@ -116,6 +116,5 @@ python manage.py runserver
 
 ### Go to following url in your browser and Calculate data according to your data
 
-```
-[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+<http://127.0.0.1:8000/>
 ```

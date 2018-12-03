@@ -1,0 +1,120 @@
+
+{% extends 'layouts/default/page.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+<div class="row">
+       <div class="col-xs-6 col-sm-6 col-md-6">
+           <h4>{% trans 'Result' %}</h4>
+       </div>
+       <div class="col-xs-6 col-sm-6 col-md-6">
+           <a href="" class="btn btn-success" role="button" aria-pressed="true">Again Calculation</a>
+       </div>
+</div>
+<br>
+<br>
+
+
+<div>
+  <center><h4>Calculation Details</h4></center>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Units</th>
+        <th>Values</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pipe Inside Radius - r1</td>
+        <td>in</td>
+        <td>{{ pipe_inside_radius }}</td>
+      </tr>
+      <tr>
+        <td>Pipe Outside Radius - r2</td>
+        <td>in</td>
+        <td>{{ pipe_outside_radius }}</td>
+      </tr>
+      <tr>
+        <td>Outer Radius of Coating 1 - r3</td>
+        <td>in</td>
+        <td>{{ outer_radius_of_coating }}</td>
+      </tr>
+      <tr>
+        <td>Total Pipeline Outside Diameter</td>
+        <td></td>
+        <td>{{ total_pipeline_outside_diameter }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+
+<div>
+  <center><h4>Calculate Dry Unit Weight</h4></center>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Units</th>
+        <th>Installation Empty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pipe Weight per Unit Length in Air</td>
+        <td>lb/ft</td>
+        <td>{{ pipe_weight }}</td>
+      </tr>
+      <tr>
+        <td>Coating 1 Wt. per Unit Length in Air</td>
+        <td>lb/ft</td>
+        <td>{{ coating_weight }}</td>
+      </tr>
+      <tr>
+        <td>Contents Wt. Per Unit Length in Air</td>
+        <td>lb/ft</td>
+        <td>{{ content_weight }}</td>
+      </tr>
+      <tr>
+        <td>Total Weight per Unit Length in Air</td>
+        <td>lb/ft</td>
+        <td>{{ total_weight }}</td>
+      </tr>
+    <tr>
+        <td>Buoyant Force per Unit Length</td>
+        <td>lb/ft</td>
+        <td>{{ buoyant_force }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+
+<div>
+  <center><h4>Summary of Submerged Weight</h4></center>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Submerged Weight/Unit Length (lb/ft)</th>
+        <th>Submerged Specific Gravity with respect to S.W.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Installation Empty</td>
+        <td>{{ submerged_weight }}</td>
+        <td>{{ submerged_specific_gravity }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+{% endblock %}

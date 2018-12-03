@@ -17,6 +17,15 @@ class SubmergedWeightForm(forms.Form):
     flooded_water_density = forms.FloatField(label=_('Flooded Water Density (lb/ft3)'), required=True, initial=64)
     hydrotest_sea_water_density = forms.FloatField(label=_('Hydrotest Sea Water Density (lb/ft3)'), required=True, initial=64.7)
 
+    # fieldsets = (
+    #     (None, {'fields': ('pipe_outside_diameter','pipe_wall_thickness','pipe_density', 'corrosion_allowance')}),
+    #     # (None, {'fields': ('start_date',)}),
+    #     # (_('Weekdays Choose'), {'fields': ('start_weekdays', 'end_weekdays')}),
+    #     # (_('Time Choose'), {'fields': ('start_time', 'end_time')}),
+    #     # (None, {'fields': ('duration', 'repeat_times',)}),
+    #     # (None, {'fields': ('repeat_times',)}),
+    # )
+
     # def __init__(self, *args, **kwargs):
     #     user = kwargs.pop('user', None)  # pop the 'user' from kwargs dictionary
     #     super(ErequestForm, self).__init__(*args, **kwargs)
@@ -42,10 +51,3 @@ class SubmergedWeightForm(forms.Form):
     #         self.fields['description'].widget.attrs['readonly'] = True
     #         self.fields['file'].widget.attrs['readonly'] = True
     #         self.fields['hr_comments'].widget.attrs['readonly'] = True
-
-class SignupForm(forms.Form):
- #django gives a number of predefined fields
- #CharField and EmailField are only two of them
- #go through the official docs for more field details
- name = forms.CharField(label='Enter your name', max_length=100)
- email = forms.EmailField(label='Enter your email', max_length=100)

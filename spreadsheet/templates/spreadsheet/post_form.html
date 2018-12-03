@@ -7,10 +7,70 @@
     <form method="post" enctype="multipart/form-data">
 
         {% csrf_token %}
-        {% bootstrap_form form %}
+        <!--{% bootstrap_form form %}-->
+        <h4>Pipe Data</h4>
+        <div class="form-group row">
+            <label for="pipe_outside_diameter" class="col-sm-3 col-form-label">Pipe Outside Diameter (OD)(in)</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" name="pipe_outside_diameter" id="pipe_outside_diameter" value=10.75 step="any" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="pipe_wall_thickness" class="col-sm-3 col-form-label">Pipe Wall Thickness (t) (in)</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" name="pipe_wall_thickness" id="pipe_wall_thickness" value=0.5 step="any" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="pipe_density" class="col-sm-3 col-form-label">Pipe Density (lb/ft3)</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" name="pipe_density" id="pipe_density" step="any" value=490 required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="corrosion_allowance" class="col-sm-3 col-form-label">Corrosion Allowance (in)</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" name="corrosion_allowance" id="corrosion_allowance" value=0.125 step="any" required>
+            </div>
+        </div>
+        <br>
+        <br>
 
+        <h4>External Coating Data</h4>
+        <div class="form-group row">
+            <label for="coating_thickness" class="col-sm-3 col-form-label">Thickness (in)</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" name="coating_thickness" id="coating_thickness" value=0.0118110236220472 step="any" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="coating_density" class="col-sm-3 col-form-label">Density (lb/ft3)</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" name="coating_density" id="coating_density" value=81.156348 step="any" required>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h4>Pipeline Contents Data</h4>
+        <div class="form-group row">
+            <label for="installation_empty_air_density" class="col-sm-3 col-form-label">Installation Empty Air Density (lb/ft3)</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" name="installation_empty_air_density" id="installation_empty_air_density" value=0 step="any" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="flooded_water_density" class="col-sm-3 col-form-label">Flooded Water Density (lb/ft3)</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" name="flooded_water_density" id="flooded_water_density" value=64 step="any" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="hydrotest_sea_water_density" class="col-sm-3 col-form-label">Hydrotest Sea Water Density (lb/ft3)</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" name="hydrotest_sea_water_density" id="hydrotest_sea_water_density" value=64.7 step="any" required>
+            </div>
+        </div>
         <button class="btn btn-success">{% trans 'Calculate' %}</button>
-
     </form>
 
 {% endblock %}

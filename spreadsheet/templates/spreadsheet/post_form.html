@@ -38,6 +38,18 @@
 
         <h4>External Coating Data</h4>
         <div class="form-group row">
+            <label for="coating_number" class="col-sm-3 col-form-label">Coating No.</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" id="coating_number" value=1 readonly>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="coating_description" class="col-sm-3 col-form-label">Description</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="coating_description" value=FBE readonly>
+            </div>
+        </div>
+        <div class="form-group row">
             <label for="coating_thickness" class="col-sm-3 col-form-label">Thickness (in)</label>
             <div class="col-sm-9">
               <input type="number" class="form-control" name="coating_thickness" id="coating_thickness" value=0.0118110236220472 step="any" required>

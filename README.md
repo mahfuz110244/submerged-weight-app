@@ -61,7 +61,7 @@ sudo chown username: /var/www
 sudo chmod u+w /var/www
 ```
 
-### Clone the project
+### Clone the project and go to project folder
 
 ```
 git clone https://github.com/mahfuz110244/submerged-weight-app.git
@@ -112,4 +112,10 @@ Just run this command:
 
 ```
 python manage.py runserver
+```
+
+### Go to following url in your browser and Calculate data according to your data
+
+```
+http://127.0.0.1:8000/
 ```
